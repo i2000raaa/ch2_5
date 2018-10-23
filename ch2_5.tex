@@ -1,3 +1,77 @@
 \section{Локальное устойчивое многообразие для гиперболической неподвижной точки}
 
-Пусть $p \in U$ это гиперболическая неподвижная точка из $f$. Для $r > 0$
+Пусть $p \in U$ это гиперболическая неподвижная точка из $f$. Для $r > 0$, определим \textit{локальное устойчивое многообразие} и \textit{локальное неустойчивое многообразие} $p$ размера $r$, как соответственно:
+$$
+W_r^s(p,f)=\{v \in U | \ | f^nv-p| \leqslant r \ \forall n \geqslant 0, \ \textrm{and} \ \lim\limits_{n \to +\infty} {f^nv=p}\}
+$$
+$$
+W_u^s(p,f)=\{v \in U | \ | f^nv-p| \leqslant r \ \forall n \geqslant 0, \ \textrm{and} \ \lim\limits_{n \to +\infty} {f^{-n}v=p}\}
+$$
+
+Конечно здесь $r$ должно удовлетворять $B(p,r) \subset U$. Очевидно, что
+$$
+f(W^s_r(p)) \subset W^s_r(p), \ f(W^u_r(p)) \supset W^u_r(p).
+$$
+Существует несколько эквивалентных характеристик для локальных устойчивых многообразий. Для постоты положим $p=0$ 
+\begin{lemma}
+\label{lemma2_17}
+(Характеристика $W^s_r$, адаптированная форма). Пусть $A: E \rightarrow E$ гиперболический линейный изоморфизм с разделением $E = E^s \oplus E^u$ ассиметрии $0 < r < 1$  по норме |.| из $Е$, который адаптирован для и из типа поля для $А$. Пусть $r > 0$. Пусть $\varphi$ : $E(r) \rightarrow E$ это Липшиц такой что
+$$
+\mathrm{Lip } \ \phi \leqslant 1 - \tau, \phi(0)=0
+$$
+Тогда 
+$$
+\begin{array}{rclll}
+W_s^r(0, A + \tau) & = & \{v \in E(r) | \ | (A + \tau)^n v | \leq r \ \forall n \geq 0\} \\
+                   & = & \{v \in E(r) | \ | (A + \tau)^n v | \in E(r) \cap C_1(E^S),  \forall n \geq 0\} \\
+                   & = & \{v \in E(r) | \ | (A + \tau)^n v | \leq r \ \forall n \geq 0\}.
+\end{array} 
+$$
+Аналогично для $W_r^u$.
+\end{lemma}
+
+\begin{demo}
+Cначала мы докажем два простых факта.\\
+\textbf{Утверждение 1.} \textit{Если $v, v^{\prime} \in E(r)$, тогда}
+$$
+|(A+ \varphi)_s v – (A+\varphi)_s v^{\prime} | \leq (\tau + \mathrm{Lip} \ \varphi) |v-v^{ \prime} |.
+$$
+
+
+По факту 
+$$
+\begin{array}{lclll}
+|(A + \varphi)_s v – (A + \varphi)_s v^{\prime} | & = & |A_ss  (v_s-v_s^{\prime}) + \varphi(v) - \varphi(v^{\prime})| \\
+& \leq & (\tau + \mathrm{Lip} \ \varphi)|v-v^{\prime} |
+\end{array}
+$$
+
+\textbf{Утверждение 2.} \textit{Если $v, v^{\prime} \in E(r)$ ,  $ v-v^{\prime} \notin C_1(E^s)$, тогда}
+$$
+|(A + \varphi)_u v – (A + \phi)_u v^{\prime}| \notin C_1(E^s)
+\textit{и}
+|(A + \varphi)_u v – (A + \varphi)_u v^{\prime}| \geqslant (\tau^{-1} - Lip\varphi)|v-v^{\prime}|.
+$$
+
+(\textit{Заметим, что} $\tau^{-1} - \mathrm{Lip} \ \varphi \geqslant 1$).
+
+Кратко, утверждение 2 говорит, что если две точки из $E(r)$ находятся в вертикальной позиции, таковыми будут и их изображения. Более того, их дистанция расшряется.
+По факту,
+$$
+|(A + \varphi)_u*v – (A + \varphi)_u*v`| \geqslant \tau^1*|v_u = v_u`| - Lip\varphi)|v-v`|.
+$$
+Но $v - v^{\prime} \notin C_1(E^S)$ ; следовательно $|v_u - v_u^{\prime}|=|v - v^{\prime}|$. Тогда
+$$
+|(F + \varphi)_u*v - (A + \varphi)_u*v`| \geqslant (\tau^-1 - Lip \varphi)*|v - v`|.
+$$
+Сейчас $v - v^{\prime} \notin C_1(E^S)$; следовательно $v - v^{\prime} \neq 0$. Объединяя это с утверждением 1 мы получаем
+$$
+|(А + \varphi)_u*v - 9A - \varphi)_u*v`| \leqslant |(A + \varphi)_s*v - (A + \varphi)_s*v`|.
+$$
+Таким образом $(A + \varphi) v - (A + \varphi) v^{\prime} \notin C_1(E^s)$. Это доказывает утверждение 2.
+Мы доказываем эквивалентные условия циркулярно. Очевидно, первое множество содержится во втором. Мы доказываем, что второе содержится в третьем. Мы используем два утверждения для специального случая $v^{\prime}=0$ (общий случай будет использован в доказательстве \ref{lemma2_17}). Предположим, что 
+
+\end{demo}
+
+
+
