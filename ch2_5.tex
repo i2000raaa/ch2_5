@@ -17,14 +17,14 @@ $$
 \label{lemma2_14}
 (Характеристика $W^s_r$, адаптированная форма). Пусть $A: E \rightarrow E$ гиперболический линейный изоморфизм с разделением $E = E^s \oplus E^u$ ассиметрии $0 < r < 1$  по норме |.| из $Е$, который адаптирован для и из типа поля для $А$. Пусть $r > 0$. Пусть $\varphi$ : $E(r) \rightarrow E$ это Липшиц такой что
 $$
-\mathrm{Lip } \ \phi \leqslant 1 - \tau, \phi(0)=0
+\mathrm{Lip } \ \varphi  \leqslant 1 - \tau, \phi(0)=0
 $$
 Тогда 
 $$
 \begin{array}{rclll}
-W_s^r(0, A + \tau) & = & \{v \in E(r) | \ | (A + \tau)^n v | \leq r \ \forall n \geq 0\} \\
-                   & = & \{v \in E(r) | \ | (A + \tau)^n v | \in E(r) \cap C_1(E^S),  \forall n \geq 0\} \\
-                   & = & \{v \in E(r) | \ | (A + \tau)^n v | \leq r \ \forall n \geq 0\}.
+W_s^r(0, A + \tau) & = & \{v \in E(r) | \ | (A + \tau)^n v | \leqslant r \ \forall n \geqslant 0\} \\
+                   & = & \{v \in E(r) | \ | (A + \tau)^n v | \in E(r) \cap C_1(E^S),  \forall n \geqslant 0\} \\
+                   & = & \{v \in E(r) | \ | (A + \tau)^n v | \leqslant r \ \forall n \geqslant 0\}.
 \end{array} 
 $$
 Аналогично для $W_r^u$.
@@ -34,22 +34,22 @@ $$
 Cначала мы докажем два простых факта.\\
 \textbf{Утверждение 1.} \textit{Если $v, v^{\prime} \in E(r)$, тогда}
 $$
-|(A+ \varphi)_s v – (A+\varphi)_s v^{\prime} | \leq (\tau + \mathrm{Lip} \ \varphi) |v-v^{ \prime} |.
+|(A+ \varphi)_s v - (A+\varphi)_s v^{\prime} | \leqslant (\tau + \mathrm{Lip} \ \varphi) |v-v^{ \prime} |.
 $$
 \\
 По факту 
 $$
 \begin{array}{lclll}
-|(A + \varphi)_s v – (A + \varphi)_s v^{\prime} | & = & |A_ss  (v_s-v_s^{\prime}) + \varphi(v) - \varphi(v^{\prime})| \\
-& \leq & (\tau + \mathrm{Lip} \ \varphi)|v-v^{\prime} |
+|(A + \varphi)_s v - (A + \varphi)_s v^{\prime} | & = & |A_ss  (v_s-v_s^{\prime}) + \varphi(v) - \varphi(v^{\prime})| \\
+& \leqslant & (\tau + \mathrm{Lip} \ \varphi)|v-v^{\prime} |
 \end{array}
 $$
 \\
 \textbf{Утверждение 2.} \textit{Если $v, v^{\prime} \in E(r)$ ,  $ v-v^{\prime} \notin C_1(E^s)$, тогда}
 $$
-|(A + \varphi)_u v – (A + \phi)_u v^{\prime}| \notin C_1(E^s)
+|(A + \varphi)_u v - (A + \phi)_u v^{\prime}| \notin C_1(E^s)
 \textit{и}
-|(A + \varphi)_u v – (A + \varphi)_u v^{\prime}| \geqslant (\tau^{-1} - Lip\varphi)|v-v^{\prime}|.
+|(A + \varphi)_u v - (A + \varphi)_u v^{\prime}| \geqslant (\tau^{-1} - Lip\varphi)|v-v^{\prime}|.
 $$
 
 (\textit{Заметим, что} $\tau^{-1} - \mathrm{Lip} \ \varphi \geqslant 1$).
@@ -57,7 +57,7 @@ $$
 Кратко, утверждение 2 говорит, что если две точки из $E(r)$ находятся в вертикальной позиции, таковыми будут и их изображения. Более того, их дистанция расшряется.
 По факту,
 $$
-|(A + \varphi)_u v – (A + \varphi)_u v`| \geqslant \tau^1*|v_u = v_u`| - Lip\varphi)|v-v`|.
+|(A + \varphi)_u v - (A + \varphi)_u v`| \geqslant \tau^1*|v_u = v_u`| - Lip\varphi)|v-v`|.
 $$
 Но $v - v^{\prime} \notin C_1(E^S)$ ; следовательно $|v_u - v_u^{\prime}|=|v - v^{\prime}|$. Тогда
 $$
@@ -68,50 +68,50 @@ $$
 |(А + \varphi)_u*v - 9A - \varphi)_u*v`| \leqslant |(A + \varphi)_s*v - (A + \varphi)_s*v`|.
 $$
 Таким образом $(A + \varphi) v - (A + \varphi) v^{\prime} \notin C_1(E^s)$. Это доказывает утверждение 2.
-Мы доказываем эквивалентные условия циркулярно. Очевидно, первое множество содержится во втором. Мы доказываем, что второе содержится в третьем. Мы используем два утверждения для специального случая $v^{\prime}=0$ (общий случай будет использован в доказательстве \ref{lemma2_17}). Предположим, что есть $v \in E(r)$ такое что $(A + \varphi)^n v \in E(r)$ для всех $n \geq 0$ но существует такое $m \geq 0$ что $w = (A + \varphi)^m v \notin C_1(E^s)$. По утверждению 2,
+Мы доказываем эквивалентные условия циркулярно. Очевидно, первое множество содержится во втором. Мы доказываем, что второе содержится в третьем. Мы используем два утверждения для специального случая $v^{\prime}=0$ (общий случай будет использован в доказательстве \ref{lemma2_17}). Предположим, что есть $v \in E(r)$ такое что $(A + \varphi)^n v \in E(r)$ для всех $n \geqslant 0$ но существует такое $m \geqslant 0$ что $w = (A + \varphi)^m v \notin C_1(E^s)$. По утверждению 2,
 $$
-|(A + \varphi) w| \geq (\tau^(-1) - \mathrm{Lip} \varphi)|w|,
+|(A + \varphi) w| \geqslant (\tau^(-1) - \mathrm{Lip} \varphi)|w|,
 $$
 \\
-\textit и $(A + \varphi) w \notin С_1(E^s)$. По индукции, для любого $n \geq 1$,
+\textit и $(A + \varphi) w \notin С_1(E^s)$. По индукции, для любого $n \geqslant 1$,
 $$
-   |(A + \varphi)^n w| \geq (\tau^(-1) - \mathrm{Lip} \varphi)^n |w|,
+   |(A + \varphi)^n w| \geqslant (\tau^(-1) - \mathrm{Lip} \varphi)^n |w|,
 $$
 Заметим, что $w \neq 0$, так как $w \neq C_1(E^s)$. Итак ${(A + \varphi)^n  w}_(n=0)^(\infty)$ неограниченна. Противоречие.
 \\
-Далее мы докажем, что третье множество содержится в четвертом. Предположим, для любого $n \geq 0$, $(A + \varphi)^n v \in E(r) \cap C_1(E^s)$. По утверждению 1,
+Далее мы докажем, что третье множество содержится в четвертом. Предположим, для любого $n \geqslant 0$, $(A + \varphi)^n v \in E(r) \cap C_1(E^s)$. По утверждению 1,
 $$
-|(A + \varphi) v| = |(A + \varphi)_s v| \leq (tau + \mathrm{Lip} \ \varphi)|v|.
+|(A + \varphi) v| = |(A + \varphi)_s v| \leqslant (tau + \mathrm{Lip} \ \varphi)|v|.
 $$
 \\
-По индукции, для любого $n \geq 1$,
+По индукции, для любого $n \geqslant 1$,
 $$
-|(A + \varphi) v| \leq (\tau - \mathrm{Lip} \varphi)^n |v|.
+|(A + \varphi) v| \leqslant (\tau - \mathrm{Lip} \varphi)^n |v|.
 $$
 В итоге, очевидно, что четвертое множество содержится в первом. Это доказывает \ref{lemma2_14}) 
 \end{demo}
 \\
-\textbf{Замечание} \ В лемме \ref{lemma2_14}, $E(r)$ может быть всё $E$. В этом случае формулировка леммы должна быть немного изменена; например второе множество ${v \in E(r) | (A + \varphi)^n v \in E(r), \forall n \geq 0}$ конечно должно быть изменено а ${v \in E | здесь r > 0 такое что (A + \varphi)^n v \in E(r), \forall n \geq 0}$. Доказательство то же самое, что в случае, когда $r$ фиксирован и, следовательно, опущен.
+\textbf{Замечание} \ В лемме \ref{lemma2_14}, $E(r)$ может быть всё $E$. В этом случае формулировка леммы должна быть немного изменена; например второе множество ${v \in E(r) | (A + \varphi)^n v \in E(r), \forall n \geqslant 0}$ конечно должно быть изменено а ${v \in E | здесь r > 0 такое что (A + \varphi)^n v \in E(r), \forall n \geqslant 0}$. Доказательство то же самое, что в случае, когда $r$ фиксирован и, следовательно, опущен.
 \\ 
 Мы применяем нашу лемму \ref{lemma2_14} к нашему диффеоморфизму $f$
 \begin{theorem}
-\label{theorem2_15} \ (Характеризация $W_r^s$, общий вид). Пусть $p \in U$ это гиперболическая фиксированная точка $f$. Есть $r > 0$, $C \geq 1$, и $0 < \lambda < 1$ такое, что
+\label{theorem2_15} \ (Характеризация $W_r^s$, общий вид). Пусть $p \in U$ это гиперболическая фиксированная точка $f$. Есть $r > 0$, $C \geqslant 1$, и $0 < \lambda < 1$ такое, что
 $$
 \begin{array}{rclll}
-W_s^r(p,f) & = & \ {v \in U | \ |f^n v - p| \leq r \ \forall n \geq 0 } \\
-                   & = & \ {v \in U | \ |f^n v - p| \leq r \, и |f^n v - | \leq C \lambda^n|v - p|, \forall n \geq 0}.
+W_s^r(p,f) & = & \ {v \in U | \ |f^n v - p| \leqslant r \ \forall n \geqslant 0 } \\
+                   & = & \ {v \in U | \ |f^n v - p| \leqslant r \, и |f^n v - | \leqslant C \lambda^n|v - p|, \forall n \geqslant 0}.
 \end{array} 
 $$
 Аналогично,
 $$
 \begin{array}{rclll}
-W_s^r(p,f)         & = & \ {v \in U | \ |f^(-n) v - p| \leq r  \forall n \geq 0} \\
-                   & = & \ {v \in U | \ |f^(-n) v - p| \leq r \, и |f^()-n) v - | \leq C \lambda^n|v - p|, \forall n \geq 0}.
+W_s^r(p,f)         & = & \ {v \in U | \ |f^(-n) v - p| \leqslant r  \forall n \geqslant 0} \\
+                   & = & \ {v \in U | \ |f^(-n) v - p| \leqslant r \, и |f^()-n) v - | \leqslant C \lambda^n|v - p|, \forall n \geqslant 0}.
 \end{array} 
 $$
 \end{theorem}
 \begin{demo}
-Мы доказываем теорему только для $W_r^s$. Если утверждение справедливо для одной из норм $E$, оно справедливо для каждой нормы. Следовательно, достаточно доказать теорему для нормы |.| из $E$, которая адаптирована для и из типа поля для $Df(p)$. Достаточно доказать, что существуют $r > 0$, $C \geq 1$ и $ 0 < \lambda < 1$ такой, что второе множество содержится в третьем.
+Мы доказываем теорему только для $W_r^s$. Если утверждение справедливо для одной из норм $E$, оно справедливо для каждой нормы. Следовательно, достаточно доказать теорему для нормы |.| из $E$, которая адаптирована для и из типа поля для $Df(p)$. Достаточно доказать, что существуют $r > 0$, $C \geqslant 1$ и $ 0 < \lambda < 1$ такой, что второе множество содержится в третьем.
 \\ Без ограничения общности будем считать $p = 0$. Напишем $Df(0) = A$. Пусть $0 < \tau < 1$ асимметрия $A$ относительно |.|. Пусть $C = 1$, и установим
 $$
 \tau < \lambda < 1
@@ -122,15 +122,15 @@ $$
 $$
 удовлетворяет $E(r)$
 $$
- \mathrm{Lip} \varphi \leq \lambda - \tau.
+ \mathrm{Lip} \varphi \leqslant \lambda - \tau.
 $$
 Пусть
 $$
-|f^n v| \leq r, \forall n \geq 0.
+|f^n v| \leqslant r, \forall n \geqslant 0.
 $$
 Тогда
 $$
-|f^n v| = |(A + \varphi)^n v| \leq (\tau +  \mathrm{Lip} \varphi)^n |v| \leq \lambda^n |v|,
+|f^n v| = |(A + \varphi)^n v| \leqslant (\tau +  \mathrm{Lip} \varphi)^n |v| \leqslant \lambda^n |v|,
 $$
 где первое неравенство по лемме \ref{lemma2_14}. Это доказывает теорему \ref{theorem2_15}.
 \end{demo}
@@ -138,14 +138,14 @@ $$
 \begin{theorem}
 \label{theorem2_16} (Изоляция гиперболической фиксированной точки). Пусть $p \in U$ будет гиперболическая фиксированная точка f. Существует $r > 0$ такое, что если $w \in U$ удовлетворяет
 $$
-|f^n w - p| \leq r, \forall n \in \zeta,
+|f^n w - p| \leqslant r, \forall n \in \zeta,
 $$
 то $w = p$.
 \end{theorem}
 \begin{demo} 
-Возьмем $r > 0$, $C \geq 1$, и $0 < \lambda 1$ такое что теорема \ref{theorem2_15} справедливо для обоих $f$  и $f^(-1)$. Пусть $w \in U$ удовлетворяет $|f^ w - p| \leq r$ для всех $n \in \zeta$. По теореме \ref{theorem2_15}, для любого $n \geq 0$,
+Возьмем $r > 0$, $C \geqslant 1$, и $0 < \lambda 1$ такое что теорема \ref{theorem2_15} справедливо для обоих $f$  и $f^(-1)$. Пусть $w \in U$ удовлетворяет $|f^ w - p| \leqslant r$ для всех $n \in \zeta$. По теореме \ref{theorem2_15}, для любого $n \geqslant 0$,
 $$
-|w - p| = |f^(-n)(f^n w) - p| \leq C \lambda^n |f^n w - p| \leq C^2 \lambda^2n |w - p|.
+|w - p| = |f^(-n)(f^n w) - p| \leqslant C \lambda^n |f^n w - p| \leqslant C^2 \lambda^2n |w - p|.
 $$
 
 Здесь первое "$\leq$" справедливо, потому что $f^n w$ находится внутри $r$ из $p$ для всех отрицательных итераций, и второе "$\leq$" справедливо, потому что $w$ находится внутри $r$ из $f$ для всех положительных итераций. Взяв $n$  достаточно большим, получим $w = p$. 
@@ -169,7 +169,7 @@ $$
 $$
 \mathrm{Lip} \ \varphi < \delta, \varphi(0) = 0,
 $$
-тогда существует отображение Липшица $\sigma: E^u \rightarrow E^s, \sigma(0)=0, \mathrm{Lip} \ \sigma <leq 1$, такое что $W^u(0,A + \varphi) = \mathrm{gr}(\sigma)$ 
+тогда существует отображение Липшица $\sigma: E^u \rightarrow E^s, \sigma(0)=0, \mathrm{Lip} \ \sigma <leqslant 1$, такое что $W^u(0,A + \varphi) = \mathrm{gr}(\sigma)$ 
 (2) Если $\varphi : E \rightarrow E$ является $C^1$, такой что 
 $$
 \mathrm{Lip} \ \varphi < \delta, \varphi(0) = 0,
@@ -193,7 +193,7 @@ $$
 \mathrm{Lip}(\varphi) < \delta, \varphi(0)=0.
 $$
 
-Докажем, что существует отображение Липшица $\sigma: E^u \rightarrow E^s, \sigma(0)=0, \mathrm{Lip} \ \sigma \leq 1$, чей граф $\mathrm{gr}(\sigma)$ инвариантен относительно $A+\varphi$. Потом докажем, что граф равен $W^u(0,A+ \varphi)$
+Докажем, что существует отображение Липшица $\sigma: E^u \rightarrow E^s, \sigma(0)=0, \mathrm{Lip} \ \sigma \leqslant 1$, чей граф $\mathrm{gr}(\sigma)$ инвариантен относительно $A+\varphi$. Потом докажем, что граф равен $W^u(0,A+ \varphi)$
 
 Условие инвариантности 
 $$
@@ -215,7 +215,7 @@ $$
 $$
 Поскольку 
 $$
-m(A_{uu}) \geq \tau^{-1}, \mathrm{Lip}(\varphi(I_u+\sigma)) \leq 2 \mathrm{Lip} \varphi < 2\delta = 1-\tau
+m(A_{uu}) \geqslant \tau^{-1}, \mathrm{Lip}(\varphi(I_u+\sigma)) \leqslant 2 \mathrm{Lip} \varphi < 2\delta = 1-\tau
 $$
 по теореме ~\ref{theorem2_7}, $A_{uu}+\varphi_u(I_u + \sigma)$ обратимо. Следовательно
 $$
@@ -225,7 +225,7 @@ $$
 $$
 T(\sigma)=(A_{ss}\sigma + \varphi_s(I_u+\sigma))(A_{uu} + \varphi_u(I_u+\sigma))^{-1},
 $$
-называемое \textit{граф трансформации} порожденное $A+\varphi$. Смотри рис. ~\ref{fig2_10}. Нахождение $\sigma$ с помощью 
+называемое \textit{граф трансформации} порожденное $A+\varphi$. Смотри рис. ~\ref{picture2_10}. Нахождение $\sigma$ с помощью 
 $$
 (A+\varphi)(\mathrm{gr}(\sigma)) \subset \mathrm{gr}(\sigma)
 $$
@@ -235,9 +235,9 @@ $$
 \begin{center}
 \begin{minipage}{.85\textwidth}
 \begin{center}
-\includegraphics[width=0.6\columnwidth]{2_10.jpg}
+%\includegraphics[width=0.6\columnwidth]{<filename.jpg>}
 \caption{$A + \varphi$ трансформирует граф $\mathrm{gr}(\sigma)$ в граф $\mathrm{gr}(T\sigma)$ порождая отображение, которое трансформирует $\sigma$ в $T\sigma$. Мы должны найти инвариантный граф относительно $A+\varphi$, который соответствует фиксированной точке из $T$ }
-\label{fig2_10}
+\label{picture2_10}
 \end{center}
 \end{minipage}
 \end{center}
