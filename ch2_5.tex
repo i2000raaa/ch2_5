@@ -268,7 +268,82 @@ $$
 Тем не менее есть контрпримеры, показывающие, что преобразование графа не является сжатием по норме $C^1$. Это сложная и серьезная проблема в доказательстве теоремы о стабильном многообразии. 
 начала давайте выберем соответствующую норму, такую что преобразование графа являлось бы сжатием для инвариантного графа Липшица; потом докажем что этот граф из $C^1$, используя различные идеи в качестве второго шага. Даже на первом шаге сложно выбрать пространство и норму, также как и домен для сжатия. ЗДесь мы обратимся к Хирш-Пух-Шуб(1977) чтобы посмотреть на пространство $\Sigma(E^u, E^s;0)$ с нормой $| \cdot |_*$ и выбрать подмножество $\Sigma(E^u, E^s;0)[1]$ в качестве домена.
 \end{remark}
-
+Мы проверяем, отображается ли $T$  $\Sigma(E^u,E^s;0)[1]$ в себя.С $\sigma \in \Sigma(E^u,E^s;0)$, это легко увидеть, что $(T\sigma)(0)=0$ и $(T\sigma)$ это Липшиц с
+$$
+Lip(T\sigma)\leqslant \frac{\tau +2Lip\varphi}{\tau*(-1) - 2Lip\varphi} < 1.
+$$
+Следовательно $T$ отображаетя $\Sigma(E^u,E^s;0)[1]$ в себя.
+Далее мы проверяем, что $T$ это сокращение по норме $|\cdot|_*$. Для любого $\sigma, \sigma^{\prime} \in \Sigma(E^u,E^s;0)[1]$, сокращаем
+$$
+F = A_uu + \varphi _u(I_u + \sigma) : E^u \rightarrow E^u,
+F^{\prime} = A_uu + \varphi _u(I_u + \sigma^{\prime}) : E^U \rightarrow E^u,
+$$
+это,
+$$
+T(\sigma)F = A_ss \sigma + \varphi_s(I_u + \sigma),
+T(\sigma^{\prime})F^{\prime} = A_ss \sigma^{\prime} + \varphi_s(I_u + \sigma^{\prime}),
+$$
+С того момента, как $F : E^u \rightarrow E^u$ это гомеоморфизм, который фиксирует начало координат, когда $v$ пробегает через $E^u - {0}$,
+$$
+\begin{array}{rclll}
+|T(\sigma) - T^{\prime}(\sigma^{\prime})|_* &=& \sup\limits_{v \neq 0} \frac{(T\sigma)(v) - (T\sigma^{\prime})(v)}{|v|}
+&=& \sup\limits_{v \neq 0} \frac{(T\sigma)(Fv) - (T\sigma^{\prime})(Fv)}{|Fv|}
+\end{array}
+$$
+С одной стороны,
+$$
+\begin{array}{lclll}
+|(T\sigma)(Fv) - (T\sigma^{\prime})(Fv)| \\
+\leqslant |(T\sigma)(Fv) - (T\sigma^{\prime})(F^{\prime} v)| + |(T\sigma)(F^{\prime} v) - (T\sigma^{\prime})(Fv)| \\
+\leqslant |A_ss(\sigma(v) - \sigma^{\prime}(v))| + |\varphi_s(v + \sigma(v)) - \varphi_s(v + \sigma^{\prime}(v))| + \mathrm{Lip} \ (T\sigma^{\prime})|F^{\prime}  - F v| \\
+\leqslant \tau|\sigma (v) - \sigma^{\prime}(v)| + \mathrm {Lip} \ \varphi|\sigma(v) - \sigma^{\prime}(v)| + \mathrm {Lip} \ \varphi|\sigma(v) - \sigma^{\prime}(v)| \\
+\leqslant  (\tau + 2 \mathrm{Lip} \ \varphi)|\sigma(v) - \sigma^{\prime} (v)|.
+\end{array}
+$$
+С другой стороны, с $\varpi(0)$ = 0 и $\sigma(0) =0$,
+$$
+\begin{array}{rclll}
+|Fv| & = & |A_uu v + \varphi_u(v + \sigma(v)) - \varphi_u(0 + \sigma(0))| \\
+& \geqslant & \tau^(-1) |v| - \mathrm{Lip} \ \varphi(|v| + \mathrm{Lip} \ \sigma|v|) \\
+& \geqslant & (\tau^(-1) - 2 \mathrm{Lip} \ \varphi)|v|.
+\end{array}
+$$
+Таким образом,
+$$
+\begin{array}{rclll}
+|T(\sigma) - T(\sigma^{\prime})|_* & \leqslant & \displaystyle\frac {\tau + 2 \mathrm{Lip} \varphi}{\tau(-1) - 2 \mathrm{Lip} \varphi} \sup\limits_{v \neq 0} \displaystyle \frac{|\sigma(v) - \sigma^{\prime}(v)|}{|v|} \\ 
+& = &  \displaystyle\frac {\tau + 2 \mathrm{Lip} \ \varphi}{\tau(-1) - 2 \mathrm{Lip} \varphi} |\sigma - \sigma^{\prime}|_*.
+\end{array}
+$$
+Так как
+$$
+\frac{\tau + 2 \mathrm{Lip} \ \varphi}{\tau^{-1} - 2 \mathrm{Lip} \ \varphi} < 1,
+$$
+$T = T_\varphi$ это сжатие по норме $|\cdot|_*$. по принципу сжатого отображения T имеет единственную неподвижную точку $\sigma = \sigma_\varphi \in \Sigma(E^u,E^s;0)[1]$ такую, что
+$$
+(A + \varphi)(\mathrm {gr}(\sigma)) \subset \mathrm{gr}(\sigma).
+$$
+Заметим, что для любого $(v, \sigma(v)) \in \mathrm{gr} (\sigma)$, полагая $u=(A_{uu}+\varphi_u(I_u+\sigma))^{-1}v$ дает $(A+\varphi)(u,\sigma(u))=(v,\sigma(v))$. Следовательно мы имеем 
+$$
+(A+\varphi)(\mathrm{gr}(\sigma))=\mathrm{gr}(\sigma)
+$$
+Сейчас мы докажем
+$$
+\mathrm{gr}(\sigma) = W^u(0,A + \varphi).
+$$
+Мы применяем лемму ~\ref{lemma2_14} к $(A + \varphi)^(-1)$  для случая $E(r) = E$ (посмотрите на Замечание после леммы ~\ref{lemma2_14}). По факту, так как $\mathrm{Lip} \ \varphi < \delta \leqslant m(A), A + \varphi$ обратимо. Больше того, записав $(A+\varphi)^{-1}=A^{-1}+\psi$ легко увидеть, что если $\mathrm{Lip} \ \varphi$ мал, тогда и $\mathrm{Lip} \ \psi$ тоже мал. Следовательно, сокращая $\delta$ мы можем предположить, что $(A+\varphi)^{-1}$ удовлетворяет Лемме ~\ref{lemma2_14}. Теперь так как $\sigma(0) = 0$ и $\mathrm{Lip} \ \sigma \leq 1$. Граф $\mathrm{gr}(\sigma)$ помещается в конусе $C_1(E^u)$. Так как $\mathrm{gr}(\sigma)$ инвариантно относительно $(A+\varphi)^{-1}$, по Лемме ~\ref{lemma2_14} имеем
+$$
+\mathrm{gr}(\sigma) \subset W^u(0, A|\varphi)
+$$
+Чтобы доказать обратное включение, предположим что существует $v \in W^u(0,A+\varphi) - \mathrm{gr}(\sigma)$. Тогда существует $w \in \mathrm{gr}(\sigma)$ такой, что $v_u=w_u$. Тогда $v-w \notin C_1(E^u)$. По  \textbf{Утверждению 2} из доказательства Леммы ~\ref{lemma2_14}
+$$
+|(A+\varphi)^{-n}(v)-(A+\varphi)^{-n}(w)| \rightarrow \infty
+$$
+Но $v$ и $w$ принадлежат к $W^u(0,A+\varphi)$; следовательно
+$$
+|(A+\varphi)^{-n}(v)-(A+\varphi)^{-n}(w)| \rightarrow 0
+$$
+Получаем противоречие. Это доказывает, что $\mathrm{gr}(\sigma)=W^u(0,A+\varphi)$, пункт (1).
 
 
 
